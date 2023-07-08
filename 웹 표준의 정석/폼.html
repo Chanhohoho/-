@@ -45,26 +45,32 @@
             <input type="datetime-local"> <br>
             <input type="submit" value="버튼에 표시할 내용"> <br>
             <input type="reset" value="버튼에 표시할 내용"> <br>
-            <input type="image"> <br>
+            <input type="image"> <br> <!-- 버튼 대신 이미지를 통한 submit -->
             <input type="button" value="기타 태그.html 열기" onclick="window.open('기타 태그.html')"> <br>
             <input type="file"> <br> 
             <input type="hidden"> <br>
             <!-- 타입의 세분화는 모바일 기기의 가상 키보드 배열에 영향을 준다 -->
+            
 
             <!-- 여러 줄의 텍스트 입력 -->
             <label for="memo">메모</label>
             <textarea name="메모" id="memo" cols="40" rows="10" placeholder="뭐라도 적어봐"></textarea> <br>
 
             <!-- 드롭다운 목록 -->
-            <select size="3" multiple>
-                <option value="1">1</option>
-                <option value="2" selected>2</option>
-                <option value="3" selected>3</option>
+            <select size="5" multiple>
+                <optgroup label="그룹1">
+                    <option value="값1">옵션1</option>
+                    <option value="값2">옵션2</option>
+                </optgroup>
+                <optgroup label="그룹2">
+                    <option value="값3">옵션3</option>
+                    <option value="값4">옵션4</option>
+                </optgroup>
             </select> <br>
             <!-- size 속성은 표시할 항목 수, multiple 속성은 둘 이상의 항목 선택시 사용 -->
 
             <!-- 데이터 목록 -->
-            <label for="데이터 목록 id"></label>
+            <label for="데이터 목록 id">데이터 목록</label>
             <input type="text" list="데이터 목록 id">
             <datalist id="데이터 목록 id">
                 <option value="값1">옵션1</option>

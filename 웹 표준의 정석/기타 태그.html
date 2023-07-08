@@ -7,11 +7,39 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 수평 줄 -->
+    <hr>
+    
+    <!-- 입력한 그대로 화면에 표시하는 태그 -->
+    <pre>1     23</pre>
+    <!-- 주의!!! -->
+    <!-- 스크린 리더 등의 기계는 <pre> 태그를 만나면 그 부분을 건너 뛰어 버리는데,
+    대체 텍스트를 추가하여 그 부분의 내용을 알 수 있도록 하는것이 좋다 -->
+
+    <!-- 콘텐츠 묶음 -->
+    <figure>
+        <!-- <figcaption>특수 기호를 사용하는 이유</figcaption> -->
+        <span>
+            HTML문서의 특성상 여러 개의 공백 문자, 즉 띄어쓰기를 입력하더라고 한칸만 인식하기 때문에
+            여러개의 공백을 나타내는 특수 기호를 여러 개 입력해야 한다
+            또한 "(따옴표)를 속성 값의 따옴표처럼 인식하거나〈(꺾쇠 괄호)를 태그로 인식하기 때문에 
+            특수 기호를 사용하여 표시해야 한다
+        </span>
+        <!-- 콘텐츠에 대한 설명 글 -->
+        <figcaption>특수 기호를 사용하는 이유</figcaption>
+    </figure>
+
+    <!-- 줄바꿈 없이 영역 묶기 -->
+    <span>1     23</span> <br>
+    <span>1　　　23</span> <!-- 특수 기호로 공백 처리 -->
+
     <p>단락</p>
     
-    <a href="http://www.naver.com" target="_blank">네이버, 새 창(또는 탭)에서 링크를 오픈</a>
-    <a href="http://www.naver.com" target="_self">네이버, 현재 창에서 링크를 오픈</a>
-    <!-- target 속성을 통해 새창에서 열기 -->
+    <a href="http://www.naver.com" target="_blank">네이버, 새 창(또는 탭)에서 링크를 오픈</a> <br> <!-- target 속성을 통해 새창에서 열기 -->
+    <a href="http://www.naver.com" target="_self">네이버, 현재 창에서 링크를 오픈</a> <!-- 기본 설정 -->
+
+    <!-- 페이지내 다른 페이지 삽입 -->
+    <iframe src="삽입.html" frameborder="1"></iframe>
 
     <blockquote>
         인용문
