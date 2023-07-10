@@ -1,0 +1,71 @@
+/* 가상 클래스 선택자 정의 순서 - 순서가 바뀌면 제대로 적용되지 않음
+1. :link
+2. :visited
+3. :hover
+4. :active */
+
+/* 방문하지 않은 링크에 스타일 적용 */
+:link {
+    color: black;
+}
+
+/* 방문한 링크에 스타일 적용 */
+:visited {
+    color: red;
+}
+
+/* 특정 요소에 마우스 포인터를 올려놓으면 스타일 적용 */
+[target]:hover {
+    color: blue;
+}
+
+/* 웹 요소를 활성화했을 때 스타일 적용 ex) 클릭 */
+[target]:active {
+    background-color: red;
+}
+
+/* 웹 요소에 초점이 맞추어졌을 때 스타일 적용 ex) 입력 커서를 이동 */
+input:focus {
+    background-color: blue;
+}
+
+/* 앵커 대상에 스타일 적용 */
+#id1:target {
+    background-color: antiquewhite;
+}
+
+/* 요소 상태에 따른 스타일 적용 */
+:enabled {
+    background-color: aqua;
+}
+
+:disabled {
+    background-color: gray;
+}
+
+:checked + label{
+    font-size: 100px;
+}
+
+/* 특정 요소 제외하고 스타일 적용 */
+input:not([type=text]) + label {
+    background-color: antiquewhite;
+}
+
+/* 구조 가상 클래스 - 웹 문서의 구조를 기준으로 특정 위치에 있는 요소에 스타일 적용*/
+/* ex) :nth-child(n) - 부모 안에 있는 모든 요소 중에서 n번째 자식 요소를 선합니다 */
+
+/* 가상 요소 - 문서 안의 특정 부분에 스타일을 지정하기 위해 가상으로 요소를 만들어 추가한다 */
+.new::after {
+    content: "NEW!!";
+    margin-left: 5px;
+    background-color: red;
+    color: white;
+}
+
+.new::before {
+    content: "NEW!!";
+    margin-right: 5px;
+    background-color: red;
+    color: white;
+}
