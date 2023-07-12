@@ -29,9 +29,9 @@ input:focus {
     background-color: blue;
 }
 
-/* 앵커 대상에 스타일 적용 */
-#id1:target {
-    background-color: antiquewhite;
+/* 앵커 대상이 되어 이동시 스타일 적용 */
+#앵커:target {
+    color: aqua;
 }
 
 /* 요소 상태에 따른 스타일 적용 */

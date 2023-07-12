@@ -1,0 +1,47 @@
+/* 
+뷰포트 - <meta> 태그
+
+너비, 높이
+확대, 축소
+
+미디어 쿼리 - CSS
+
+미디어 유형 (주로 모바일 퍼스트 설계)
+너비, 높이
+화면 회전
+단말기와 브라우저 해상도 차이
+
+그리드 레이아웃 - CSS
+
+플렉스 박스 레이아웃
+CSS 그리드 레이아웃
+*/
+
+body {
+    background: url(https://cdn.aitimes.kr/news/photo/202303/27617_41603_044.jpg) no-repeat fixed;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1024px){
+    body{
+        background: url(https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E) no-repeat fixed;
+        background-size: contain;
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        background: url(https://www.codingfactory.net/wp-content/uploads/abc.jpg) no-repeat fixed;
+        background-size: contain;
+
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+        background: url(https://demo.ycart.kr/shopboth_farm_max5_001/data/editor/1612/cd2f39a0598c81712450b871c218164f_1482469221_493.jpg) no-repeat fixed;
+        background-size: contain;
+
+    }
+}
