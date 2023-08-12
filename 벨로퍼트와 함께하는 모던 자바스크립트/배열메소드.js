@@ -24,7 +24,11 @@ const todos = [
     done: false
   }
 ];
+const pets = ['cat', 'dog', 'bat'];
 /////////////////////////////////////////////////////////////////////////////////////////////
+// includes
+  console.log(pets.includes('cat')); // Expected output: true
+  console.log(pets.includes('at')); // Expected output: false
 
 // forEach
   superheroes.forEach(hero => {
