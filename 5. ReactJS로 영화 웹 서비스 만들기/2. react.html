@@ -5,34 +5,34 @@
   </body>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.getElementById("root");
 
     const handleClick = () => {
       console.log("Clicked");
     };
-    const div = React.createElement(
-      "div",
-      {
-        id: "sexy-div",
-        style: {
-          color: "red",
-        }
-      },
-      "Hello I'm a div"
-    );
-    const btn = React.createElement(
-      "button",
-      {
-        onClick: handleClick
-      },
-      "Click me"
+
+    const Title = () => {
+      return (
+        <div id="title" onMouseEnter={()=>console.log("mouse enter")}>
+          hello i'm a title
+        </div>
+      )
+    }
+
+    function Btn() {
+      return (
+        <button onClick={handleClick}>Click me</button>
+      )
+    }
+
+    const container = (
+      <div>
+        <Title/>
+        <Btn/>
+      </div>
     )
-    const container = React.createElement(
-      "div",
-      null,
-      [div, btn]
-    );
     ReactDOM.render(container, root);
   </script>
 </html>
