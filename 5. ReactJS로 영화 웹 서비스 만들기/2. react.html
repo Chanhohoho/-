@@ -7,16 +7,32 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script>
     const root = document.getElementById("root");
-    const span = React.createElement(
-      "span",
+
+    const handleClick = () => {
+      console.log("Clicked");
+    };
+    const div = React.createElement(
+      "div",
       {
-        id: "sexy-span",
+        id: "sexy-div",
         style: {
           color: "red",
         }
       },
-      "Hello I'm a span"
+      "Hello I'm a div"
     );
-    ReactDOM.render(span, root);
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: handleClick
+      },
+      "Click me"
+    )
+    const container = React.createElement(
+      "div",
+      null,
+      [div, btn]
+    );
+    ReactDOM.render(container, root);
   </script>
 </html>
